@@ -4,8 +4,8 @@ dotenv.config();
 const client = new OpenAI({ apiKey: process.env.apiKey });
 
 class OpenAIResponse {
-  static async generateResponse(userMessage, conversationHistory = []) {
-    //const apiKey = process.env.OPENAI_API_KEY;
+  static async generateResponse(userMessage) {
+    
 
     const responseData = await client.chat.completions.create({
       model: "gpt-4o",
